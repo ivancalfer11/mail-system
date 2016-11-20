@@ -61,16 +61,7 @@ public class MailClient
         mails = server.howManyMailItems(user);
         System.out.println("Tienes" + "" + mails + "" + "emails" + "" + "nuevos");
     }
-    public void autoRespuesta(String to, String message , String subject){
-     to = "user";
-     subject = "Cerrado por vacaciones";
-     message = "En estos momentos hemos cerrado por vacaciones, le contestaremos a la vuelta";
-   
-    }   
-    public void responderMail (boolean autoRespuesta){
-       if (autoRespuesta == true){
-        }
-    }
+    
                      
                     
                     
