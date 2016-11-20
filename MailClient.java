@@ -11,6 +11,8 @@ public class MailClient
     private MailServer server;
     // The user running this client.
     private String user;
+    
+    private boolean autoRespuesta;
 
     /**
      * Create a mail client run by user and attached to the given server.
@@ -48,11 +50,32 @@ public class MailClient
      * Send the given message to the given recipient via
      * the attached mail server.
      * @param to The intended recipient.
-     * @param message The text of the message to be sent.
+     * @param message The text of the message {to be sent.
      */
     public void sendMailItem(String to, String message, String subject)
-    {
-        MailItem item = new MailItem(user, to, message , subject);
+    {     MailItem item = new MailItem(user, to, message , subject);
         server.post(item);
     }
+    public void getEmails(){
+        int mails;
+        mails = server.howManyMailItems(user);
+        System.out.println("Tienes" + "" + mails + "" + "emails" + "" + "nuevos");
+    }
+    public void autoRespuesta(String to, String message , String subject){
+     to = "user";
+     subject = "Cerrado por vacaciones";
+     message = "En estos momentos hemos cerrado por vacaciones, le contestaremos a la vuelta";
+   
+    }   
+    public void responderMail (boolean autoRespuesta){
+       if (autoRespuesta == true){
+        }
+    }
+                     
+                    
+                    
+                    
+        
+   
 }
+    

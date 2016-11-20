@@ -15,6 +15,8 @@ public class MailItem
     private String message;
     
     private String subject;
+    
+    private boolean respuestaAutomatica;
 
     /**
      * Create a mail item from sender to the given recipient,
@@ -64,5 +66,8 @@ public class MailItem
         System.out.println("From: " + from);
         System.out.println("To: " + to);
         System.out.println("Message: " + message);
+        
+             
+        
     }
 }
